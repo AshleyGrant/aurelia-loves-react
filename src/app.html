@@ -1,3 +1,13 @@
 <template>
-  <h1>${message}</h1>
+  <require from="./resources/elements/date-picker"></require>
+  <require from="./resources/elements/react-date"></require>
+  <h2>Pick a date!</h2>
+
+  <date-picker selected-date.bind="startDate" on-change.call="dateChanged(date)"></date-picker>
+  
+  <p class="bg-success">Start Date: ${startDate | date}</p>
+  
+  <p class="bg-warning">React Start Date:
+    <react-date date.bind="startDate"></react-date>
+  </p>
 </template>

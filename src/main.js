@@ -3,7 +3,7 @@ import environment from './environment';
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
-    .feature('resources');
+    .globalResources(['./resources/value-converters/date']);
 
   if (environment.debug) {
     aurelia.use.developmentLogging();

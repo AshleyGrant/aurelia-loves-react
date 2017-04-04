@@ -14,7 +14,8 @@
     "fileExtension": ".js",
     "options": {
       "plugins": [
-        "transform-es2015-modules-amd"
+        "transform-es2015-modules-amd",
+        "transform-react-jsx"
       ]
     },
     "source": "src/**/*.js"
@@ -86,6 +87,7 @@
         "name": "app-bundle.js",
         "source": [
           "[**/*.js]",
+          "[**/*.jsx]",
           "**/*.{css,html}"
         ]
       },
@@ -134,7 +136,27 @@
             "path": "../node_modules/aurelia-testing/dist/amd",
             "main": "aurelia-testing",
             "env": "dev"
-          }
+          },
+          {
+            "name": "react",
+            "path": "../node_modules/react/dist",
+            "main": "react"
+          },
+          {
+            "name": "react-dom",
+            "path": "../node_modules/react-dom/dist",
+            "main": "react-dom"
+          },
+          {
+            "name": "react-datepicker",
+            "path": "../node_modules/react-datepicker/dist",
+            "main": "react-datepicker",
+            "resources": [
+              "react-datepicker.css"
+            ]
+          },
+          "react-onclickoutside",
+          "moment"
         ]
       }
     ]

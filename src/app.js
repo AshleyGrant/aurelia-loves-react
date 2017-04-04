@@ -1,5 +1,9 @@
+import moment from 'moment';
+
 export class App {
-  constructor() {
-    this.message = 'Hello World!';
+  startDate = moment();
+  
+  dateChanged(date) {
+    this.startDate = date;
   }
 }
